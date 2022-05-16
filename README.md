@@ -1,3 +1,12 @@
+## Présentation du projet
+***
+
+Test d'application de e-commerce inspiré du site Amazon (RESTful API) en utilisant 
+le framework backend NESTJS avec une authentification JWT et l'utilisation d'une 
+base de données en MongoDB (techno utilisées : Docker, MongoDB, Mongoose, mongo-express)
+
+Ce projet a été initialisé avec le starter de la CLI [Nest](https://github.com/nestjs/nest).
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
@@ -22,52 +31,72 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## 🚀 Installation du projet
+***
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- récupération du projet sur Github par HTTPS :
 
-## Installation
-
-```bash
-$ npm install
+```shell script
+$ https://github.com/tony-dugue/amazon-clone-nestjs-api.git
 ```
 
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+- installer les packages :
+```shell script
+$ yarn install
 ```
 
-## Test
+## Démarrer l'application
+***
+(1) démarrer l'application docker
 
+(2) Démarrer le serveur de développement (à la racine du projet) :
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+$ yarn start #ou $ npm run start
 ```
 
-## Support
+Ou avec le watch mode
+```bash
+$ yarn start:dev #ou $ npm run start:dev
+```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+(3) dans le navigateur, visualisation de la base de données :
+```bash
+http://localhost:8081/
+```
 
-## Stay in touch
+### Autres commandes
+
+Démarrer les services dans docker :
+```bash
+$ docker-compose up -d
+```
+
+Voir les containers docker en cours de fonctionnement (si la bdd est bien démarrée) :
+```bash
+$ docker ps
+```
+
+Préparer l'application pour la production :
+```bash
+$ yarn start:prod #ou $ npm run start:prod
+```
+
+## Ressources utilisées dans le projet
+***
+
+[docker](https://www.docker.com/) <br />
+Base de données : [MongoDB](https://www.mongodb.com/fr-fr) <br />
+ODM : [mangoose](https://mongoosejs.com/) <br />
+GUI base de données : [mongo-express](https://github.com/mongo-express/mongo-express/) <br /> 
+
+
+## Nestjs Support
+***
+
+Nest is an [MIT licensed](LICENSE) open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+### Stay in touch
 
 - Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
 - Website - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
