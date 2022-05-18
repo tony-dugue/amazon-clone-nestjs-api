@@ -87,8 +87,9 @@ $ yarn start:prod #ou $ npm run start:prod
 [docker](https://www.docker.com/) <br />
 Base de données : [MongoDB](https://www.mongodb.com/fr-fr) <br />
 ODM : [mangoose](https://mongoosejs.com/) <br />
-GUI base de données : [mongo-express](https://github.com/mongo-express/mongo-express/) <br /> 
-
+GUI base de données : [mongo-express](https://github.com/mongo-express/mongo-express/) <br />
+Hachage des mots de passe : [Bcrypt](https://github.com/kelektiv/node.bcrypt.js) <br />
+Authentification middleware pour Nodejs : [passport.js](https://www.passportjs.org/) <br />
 
 ## Nestjs Support
 ***
