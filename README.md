@@ -1,7 +1,7 @@
 ## Présentation du projet
 ***
 
-Test d'application de e-commerce inspiré du site Amazon (RESTful API) en utilisant 
+RESTful API du test d'application de e-commerce inspiré du site Amazon en utilisant 
 le framework backend NESTJS avec une authentification JWT et l'utilisation d'une 
 base de données en MongoDB (techno utilisées : Docker, MongoDB, Mongoose, mongo-express)
 
