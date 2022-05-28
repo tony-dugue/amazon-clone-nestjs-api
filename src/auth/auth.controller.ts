@@ -1,9 +1,9 @@
-import {Body, Controller, HttpCode, HttpStatus, Post} from '@nestjs/common';
+import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
 
-import {AuthService} from "./auth.service";
-import {NewUserDTO} from "../user/dtos/new-user.dto";
-import {UserDetails} from "../user/user-details.interface";
-import {ExistingUserDTO} from "../user/dtos/existing-user.dto";
+import { AuthService } from './auth.service';
+import { NewUserDTO } from '../user/dtos/new-user.dto';
+import { UserDetails } from '../user/user-details.interface';
+import { ExistingUserDTO } from '../user/dtos/existing-user.dto';
 
 @Controller('auth')
 export class AuthController {
@@ -18,5 +18,11 @@ export class AuthController {
   @HttpCode(HttpStatus.OK)
   login(@Body() user: ExistingUserDTO): Promise<{ token: string } | null> {
     return this.authService.login(user);
+  }
+
+  @Post('verify-jwt')
+  @HttpCode(HttpStatus.OK)
+  verifyJwt(@Body() payload: { jwt: string }) {
+    return this.authService.verifyJwt(payload.jwt);
   }
 }
