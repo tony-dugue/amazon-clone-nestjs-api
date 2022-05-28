@@ -23,7 +23,11 @@ export class AuthService {
     const { name, email, password } = user;
     const existingUser = await this.userService.findByEmail(email);
 
-    if (existingUser) return 'Un compte existe déjà avec cet email!';
+    if (existingUser)
+      throw new HttpException(
+        'Un compte existe déjà avec cet email!',
+        HttpStatus.CONFLICT,
+      );
 
     const hashedPassword = await this.hashPassword(password);
 
@@ -62,7 +66,8 @@ export class AuthService {
     const { email, password } = existingUser;
     const user = await this.validateUser(email, password);
 
-    if (!user) return null;
+    if (!user)
+      throw new HttpException('Credentials invalid!', HttpStatus.UNAUTHORIZED);
 
     const jwt = await this.jwtService.signAsync({ user });
     return { token: jwt };
