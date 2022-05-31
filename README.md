@@ -90,6 +90,7 @@ ODM : [mangoose](https://mongoosejs.com/) <br />
 GUI base de données : [mongo-express](https://github.com/mongo-express/mongo-express/) <br />
 Hachage des mots de passe : [Bcrypt](https://github.com/kelektiv/node.bcrypt.js) <br />
 Authentification middleware pour Nodejs : [passport.js](https://www.passportjs.org/) <br />
+Passerelle de paiement : [stripe](https://www.stripe.com/) <br />
 
 ## Nestjs Support
 ***
