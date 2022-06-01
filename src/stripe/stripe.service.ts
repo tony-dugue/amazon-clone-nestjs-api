@@ -18,7 +18,7 @@ export class StripeService {
     const totalPrice = cart.reduce((acc, item) => acc + item.quantity * item.price, 0);
 
     return this.stripe.paymentIntents.create({
-      amount: totalPrice * 100, // cents
+      amount: +totalPrice.toFixed(2) * 100, // cents
       currency: 'eur',
       payment_method_types: ['card'],
     });
